@@ -3,18 +3,30 @@
 You are an expert developer. When generating commit messages, you MUST strictly follow the rules below.
 
 ## 1. Structure
+
+```text
 Type: Eng title(25~30 characters)
 
 - Korean Message what and why change this code
 - Another change message if needed (optional)
+```
 
 ## 2. Constraints (Strict Rules)
 1. **Type**: 아래 명시된 타입 중 하나를 사용하되, **반드시 첫 글자는 대문자**로 작성해야 합니다.
    - Feat: 새로운 기능 추가
    - Fix: 버그 수정
-   - Refactor: 코드 리팩토링 (기능 변경 없음)
+   - Refactor: 기능 변경 없는 코드 구조 개선
+   - Perf: 성능 개선
    - Docs: 문서 수정
-   - Chore: 빌드 설정, 패키지 매니저 수정 등
+   - Style: 코드 의미 변경 없는 포맷팅, 공백, 세미콜론 수정
+   - Test: 테스트 코드 추가 또는 수정
+   - Build: 빌드 설정, 번들러, 패키지 매니저 수정
+   - CI: CI/CD 설정 또는 워크플로 수정
+   - Chore: 기타 유지보수 작업
+   - Revert: 이전 커밋 되돌림
+   - Rename: 파일 또는 폴더 이름 변경
+   - Remove: 코드, 파일, 기능 제거
+   - Security: 보안 취약점 수정 또는 보안 설정 강화
 2. **Title**: 반드시 **영어**로 작성하며, **첫 단어의 시작은 반드시 대문자**로 작성해야 합니다. 길이는 **25~30자** 내외로 맞춰야 합니다. 끝에 마침표(.)를 찍지 않으며, 무엇을 변경했는지 간략하고 핵심적으로 작성합니다.
 3. **Blank Line**: Title과 Body 사이에는 반드시 한 줄을 띄웁니다.
 4. **Body**: 반드시 **한국어**로 작성합니다. 
@@ -25,6 +37,7 @@ Type: Eng title(25~30 characters)
 
 ## 3. Good Examples
 
+```text
 Feat: Add bcrypt hashing API
 
 - 사용자 계정 보안 강화를 위해 bcrypt 암호화 로직 도입
@@ -33,3 +46,4 @@ Refactor: Update auth logic
 
 - 중복되던 토큰 검증 로직을 별도 미들웨어로 분리하여 재사용성 확보
 - 가독성을 저해하던 모호한 변수명들을 직관적인 이름으로 일괄 변경
+```
