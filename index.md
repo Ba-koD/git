@@ -29,21 +29,20 @@ Type: Eng title(25~30 characters)
    - Security: 보안 취약점 수정 또는 보안 설정 강화
 2. **Title**: 반드시 **영어**로 작성하며, **첫 단어의 시작은 반드시 대문자**로 작성해야 합니다. 길이는 **25~30자** 내외로 맞춰야 합니다. 끝에 마침표(.)를 찍지 않으며, 무엇을 변경했는지 간략하고 핵심적으로 작성합니다.
 3. **Blank Line**: Title과 Body 사이에는 반드시 한 줄을 띄웁니다.
-4. **Body**: 반드시 **한국어**로 작성합니다. 
+4. **Body**: 반드시 **한국어**로 작성합니다.
    - 글머리 기호 `-` 로 시작해야 합니다.
+   - `-`만 입력하고 엔터를 누른 뒤 다음 줄에 문장을 쓰는 형식은 금지합니다. `-` 뒤에 한 칸을 띄우고 같은 줄에 본문을 작성합니다.
+   - 각 `-` 항목 사이에는 불필요한 빈 줄을 추가하지 않습니다.
    - **[중요]** 문장의 끝은 '~함', '~됨', '~했습니다' 등의 서술어를 절대 사용하지 않습니다. 반드시 **순수 명사(~추가, ~수정, ~제거, ~제한, ~적용 등)로 딱 떨어지게 마무리**합니다.
-   - 여러 줄로 작성할 수 있습니다. 성격이 다른 여러 변경 사항이 포함된 경우, 줄을 나누어 여러 개의 `-` 항목으로 작성합니다.
+   - Body 항목 수는 3개로 제한하지 않습니다. 변경 내용을 설명하는 데 필요한 경우 보수적으로 줄이지 말고 `-` 항목을 가감 없이 추가하거나, 중복되거나 불필요한 항목은 삭제합니다.
+   - 여러 줄로 작성할 수 있습니다. 성격이 다른 여러 변경 사항이 포함된 경우, 줄을 나누어 필요한 만큼의 `-` 항목으로 작성합니다.
    - 이 코드를 **무엇을(What)**, **왜(Why)** 수정했는지 명확하게 설명합니다.
 
 ## 3. Good Examples
 
-```text
-Feat: Add bcrypt hashing API
+각 예시는 한 커밋 메시지 단위로 분리된 `.txt` 파일입니다.
 
-- 사용자 계정 보안 강화를 위해 bcrypt 암호화 로직 도입
-
-Refactor: Update auth logic
-
-- 중복되던 토큰 검증 로직을 별도 미들웨어로 분리하여 재사용성 확보
-- 가독성을 저해하던 모호한 변수명들을 직관적인 이름으로 일괄 변경
-```
+- [Feat: Add MFA recovery fallback](examples/feat-mfa-recovery-fallback.txt)
+- [Fix: Stabilize payment retry flow](examples/fix-payment-retry-flow.txt)
+- [Refactor: Split order pricing rules](examples/refactor-order-pricing-rules.txt)
+- [Security: Enforce admin audit trail](examples/security-admin-audit-trail.txt)
